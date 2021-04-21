@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Pizza Store</title>
+    <link rel="stylesheet" href="//stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="//code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+    <script src="//stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <form>
+            <div>
+                <a class="nav-link" href="/logout">Logout</a>
+            </div>
+        </form>
+
+        <div>
+            <a href="/currentOrders.html"><button type="text" class="btn btn-grey">Current Orders</button></a>
+        </div>
+        <div>
+            <h1>Pizza Store</h1>
+            <br>
+            <h2>Order:</h2>
+        </div>
+        
+        <br />
+        <div class="row">
+            <div class="col-md-6">
+                <form method="POST" id="orderSubmit" action="/confirm.html">
+                    <div class="form-group"> 
+                        Choose size:
+                        <input type="radio" id="small" name="sizeName" value="small" required>
+                        <label for="small">Small (12 inches)</label>
+                        
+                        <input type="radio" id="medium" name="sizeName" value="medium" required>
+                        <label for="medium">Medium (14 inches)</label>
+                        
+                        <input type="radio" id="large" name="sizeName" value="large" required>
+                        <label for="large">Large (20 inches)</label>
+                    </div>
+                    <div class="form-group">
+                        Choose Crust type:
+                        <input type="radio" id="regular" name="crustName" value="regular" required>
+                        <label for="regular">Regular</label>
+
+                        <input type="radio" id="thin" name="crustName" value="thin" required>
+                        <label for="thin">Thin</label>
+
+                        <input type="radio" id="deep" name="crustName" value="deep" required>
+                        <label for="deep">Deep</label>
+                    </div>
+
+                    <div class="form-group">
+                        Choose Toppings:
+                        <input type="checkbox" id="pepperoni" name="toppingName" value="pepperoni">
+                        <label for="pepperoni">Pepperoni</label>
+
+                        <input type="checkbox" id="anchovy" name="toppingName" value="anchovy">
+                        <label for="anchovy">Anchovy</label>
+
+                        <input type="checkbox" id="ham" name="toppingName" value="ham">
+                        <label for="ham">Ham</label>
+
+                        <input type="checkbox" id="bacon" name="toppingName" value="bacon">
+                        <label for="bacon">Bacon</label>
+
+                        <input type="checkbox" id="chicken" name="toppingName" value="chicken">
+                        <label for="chicken">Chicken</label>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="quantity">Quantity:</label>
+                        <input type="number" id="quantity" name="quantity" min="1" max="20">
+                    </div>
+
+
+                    <div class="form-group">
+                        <h2>Customer Information:</h2>
+
+                        <div id="customerName">
+                            <label for="firstName">First Name</label>
+                            <input type="text" name="firstName" id="firstName" placeholder="first name" value="" required>
+                            
+                            <label for="lastName">Last Name</label>
+                            <input type="text" name="lastName" id="lastName" placeholder="last name" value="" required>
+                        </div>
+                        <br>
+                        <div id="customerPhone">
+                            <label for="phoneNumber">Phone number</label>
+                            <input type="text" name="phoneNumber" id="phoneNumber" placeholder="XXX-XXX-XXXX" value="" required>
+                        </div>
+                        <br>
+                        <div id="customerAddress">
+                            <div>Address:</div>
+
+                            <label for="street">Street/Apt No.</label>
+                            <input type="text" name="street" id="street" placeholder="street/apt No." value="" required>
+                            <br>
+                            <label for="postalCode">Postal Code</label>
+                            <input type="text" name="postalCode" id="postalCode" placeholder="XXX XXX" value="" required>
+                            <input type="text" name="province" id="province" readonly="true" value="BC" style="border: none; width: 25px;">
+                            <input type="text" name="country" id="country" readonly="true" value="CA" style="border: none; width: 25px;">
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-grey">Submit</button>
+                <div class="form-group margin-bottom-10">
+                </div>
+                <div id="statusMsg">
+                </div>
+            </form>
+            <!-- <a href="/confirm.html"><button type="text" id="to-confirm-page" class="btn hidden-by-default"></button></a> -->
+            </div>
+        </div>
+    </div>
+    <script src="javascripts/order.js"></script>
+</body>
+
+</html>

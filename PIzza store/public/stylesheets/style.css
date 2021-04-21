@@ -1,0 +1,18 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+.btn-grey {
+  background-color: grey;
+}
+
+.hidden-by-default {
+  display: none;
+}
+
+.btn-red {
+  background-color: firebrick;
+}
+
+

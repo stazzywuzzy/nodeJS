@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Pizza Store</title>
+    <link rel="stylesheet" href="//stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="//code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+    <script src="//stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Please fill out the following information:</h2>
+        <br />
+        <div class="row">
+            <div class="col-md-6">
+                <form action="/register" method="post">
+                    <div class="form-group">
+                        <div>
+                            <label>Username:</label>
+                            <input type="text" name="username"/>
+                        </div>
+                        <div>
+                            <label>Password:</label>
+                            <input type="password" name="password"/>
+                        </div>
+
+                        <div id="customerName">
+                            <label for="firstName">First Name</label>
+                            <input type="text" name="firstName" id="firstName" placeholder="first name" value="" required>
+                        </div>
+                        
+                        <div>
+                            <label for="lastName">Last Name</label>
+                            <input type="text" name="lastName" id="lastName" placeholder="last name" value="" required>
+                        </div>
+                        <br>
+                        <div id="customerPhone">
+                            <label for="phoneNumber">Phone number</label>
+                            <input type="text" name="phoneNumber" id="phoneNumber" placeholder="XXX-XXX-XXXX" value="" required>
+                        </div>
+                        <br>
+                        <div id="customerAddress">
+                            <div>Address:</div>
+
+                            <label for="street">Street/Apt No.</label>
+                            <input type="text" name="street" id="street" placeholder="street/apt No." value="" required>
+                            <br>
+                            <label for="postalCode">Postal Code</label>
+                            <input type="text" name="postalCode" id="postalCode" placeholder="XXX XXX" value="" required>
+                            <input type="text" name="province" id="province" readonly="true" value="BC" style="border: none; width: 25px;">
+                            <input type="text" name="country" id="country" readonly="true" value="CA" style="border: none; width: 25px;">
+                        </div>
+                    </div>
+
+                        <button type="submit" class="btn btn-grey">Register</button>
+                    <div class="form-group margin-bottom-10">
+                    </div>
+                    <div id="statusMsg">
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src=""></script>
+</body>
+
+</html>

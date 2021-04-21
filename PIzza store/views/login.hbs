@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="//stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="//code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+    <script src="//stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <h1>Welcome! Please log in to start your oder.</h1>
+                </div>
+                <form action="/login" method="POST">
+                    <div class="form-group">
+                        <label>Username:</label>
+                        <input type="text" name="username"/>
+                    </div>
+                    <div>
+                        <label>Password:</label>
+                        <input type="password" name="password"/>
+                    </div>
+                    <div>
+                        <input type="submit" value="Log In"/>
+                    </div>
+                </form>
+
+                <div class="form-group">
+                    <h3>New user? Sign up here!</h3>
+                <a href="/register">Register</a>
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+    <script src=""></script>
+</body>
+
+</html>
